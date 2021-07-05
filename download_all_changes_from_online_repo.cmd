@@ -1,5 +1,8 @@
 @echo off
 
-git pull
+
+rem git pull <remote> <branch>
+git pull origin master
+
 
 pause

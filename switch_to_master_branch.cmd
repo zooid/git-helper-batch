@@ -1,5 +1,5 @@
 @echo off
 
-git checkout master
+git checkout main
 
 pause
