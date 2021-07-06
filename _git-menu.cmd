@@ -65,7 +65,9 @@ pause
 goto menu
 
 :4
-git commit -m "new commit"
+set /p message="Enter commit message: "
+pause
+git commit -m "%message%"
 pause
 goto menu
 
