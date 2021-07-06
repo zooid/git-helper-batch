@@ -4,7 +4,7 @@
 goto menu
 :menu
 cls
-color 2b
+color 1b
 echo.
 echo			  Choose Wisely!
 echo.
@@ -26,12 +26,12 @@ echo		13. Branch switch
 echo		.......................................
 echo		14. next page
 echo		.......................................
-echo		15. Quit
+echo		0. Quit
 echo.
 
 :choice
-set /P C=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]? > nul
-if "%C%"=="15" goto 15 > nul
+set /P C=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,0]? > nul
+if "%C%"=="0" goto 0 > nul
 if "%C%"=="14" goto menu1 > nul
 if "%C%"=="13" goto 13 > nul
 if "%C%"=="12" goto 12 > nul
@@ -124,7 +124,7 @@ git checkout %id%
 pause
 goto menu
 
-:15
+:0
 exit
 :end
 
@@ -152,10 +152,10 @@ echo		28. choice 28
 echo		.......................................
 echo		29. previous page
 echo		.......................................
-echo		30. Quit
+echo		0. Quit
 echo.
 :choice1
-set /P C=[16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]? > nul
+set /P C=[16,17,18,19,20,21,22,23,24,25,26,27,28,29,0]? > nul
 if "%C%"=="16" goto 16 > nul
 if "%C%"=="17" goto 17 > nul
 if "%C%"=="18" goto 18 > nul
@@ -170,7 +170,7 @@ if "%C%"=="26" goto 26 > nul
 if "%C%"=="27" goto 27 > nul
 if "%C%"=="28" goto 28 > nul
 if "%C%"=="29" goto menu > nul
-if "%C%"=="30" goto 30 > nul
+if "%C%"=="0" goto 0 > nul
 goto choice1
 
 :16
@@ -240,7 +240,3 @@ goto menu1
 :28
 
 goto menu1
-
-:30
-exit
-:end
