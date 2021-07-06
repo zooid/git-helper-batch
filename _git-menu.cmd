@@ -55,12 +55,12 @@ pause
 goto menu
 
 :2
-git status
+git status .
 pause
 goto menu
 
 :3
-git add *
+git add .
 pause
 goto menu
 
