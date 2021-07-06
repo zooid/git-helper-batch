@@ -95,10 +95,12 @@ pause
 goto menu
 
 :9
-set /p id="Enter Branch Name to upload: "
+set /p url="Enter online repo URL: "
 pause
-git remote add origin https://github.com/zooid/git-helper-batch.git
-git push origin %id%
+set /p branch="Enter Branch Name to upload: "
+pause
+git remote add origin %url%
+git push origin %branch%
 pause
 goto menu
 
@@ -118,9 +120,9 @@ pause
 goto menu
 
 :13
-set /p id="Enter Branch Name to switch to: "
+set /p branch="Enter Branch Name to switch to: "
 pause
-git checkout %id%
+git checkout %branch%
 pause
 goto menu
 
@@ -184,31 +186,31 @@ pause
 goto menu1
 
 :18
-set /p id="Enter Commit hash: "
+set /p hash="Enter Commit hash: "
 pause
-git reset --hard %id%
+git reset --hard %hash%
 goto menu1
 
 :19
-set /p id="Enter Branch Name to delete: "
+set /p branch="Enter Branch Name to delete: "
 pause
-git branch -D %id%
+git branch -D %branch%
 pause
 goto menu1
 
 :20
-set /p id="Enter online repo URL: "
+set /p url="Enter online repo URL: "
 pause
-git remote add origin %id%
+git remote add origin %url%
 git commit -m "initial commit"
 git push origin master
 pause
 goto menu1
 
 :21
-set /p id="Enter online repo URL: "
+set /p url="Enter online repo URL: "
 pause
-git remote add origin %id%
+git remote add origin %url%
 git push origin master
 pause
 goto menu1
